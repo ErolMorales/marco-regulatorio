@@ -1,7 +1,7 @@
 services:
   # LARAVEL CONTAINER
   laravel:
-    image: alanfzf/marco-regulatorio:latest
+    image: ErolMorales/marco-regulatorio:latest
     build:
       context: .
     env_file:
@@ -45,7 +45,7 @@ services:
     volumes:
       - certbot:/etc/letsencrypt
       - certbot:/var/www/certbot
-    command: certonly --standalone -w /var/www/certbot --email alandavidg13@gmail.com --agree-tos --no-eff-email --keep-until-expiring -d ${NGINX_URL}
+    command: certonly --standalone -w /var/www/certbot --email erolmorales86@gmail.com --agree-tos --no-eff-email --keep-until-expiring -d ${NGINX_URL}
     ports:
       - "80:80"
 networks:
